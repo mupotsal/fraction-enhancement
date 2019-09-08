@@ -1,5 +1,5 @@
 ﻿/* Fraction class
-enhancements by <username(s)> FIXME
+enhancements by <Liberty Mupotsa(s)> FIXME
 
 Milestone Requirements:
 By 8 am on 9/9/19 Milestone 1: Pull repo and make at least one change and commit
