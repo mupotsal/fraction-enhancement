@@ -59,20 +59,20 @@ Fraction operator +(const Fraction &frac1, const Fraction &frac2) {
 	/*int common = gcd(newnum, newden);
 	return Fraction(newnum / common, newden / common);*/
 }
-Fraction operator -(const Fraction& frac1, const Fraction& frac2) {
+Fraction operator -(const Fraction &frac1, const Fraction& frac2) {
 	int newnum = frac1.num * frac2.den - frac1.den * frac2.num;
 	int newden = frac1.den * frac2.den;
 	return Fraction(newnum, newden);	
 
 }
 
-Fraction operator /(const Fraction& frac1, const Fraction& frac2) {
+Fraction operator /(const Fraction &frac1, const Fraction& frac2) {
 	int newnum = frac1.num * frac2.den ;
 	int newden = frac1.den * frac2.num; // Note how the algorithm for dividing fractions was implemented
 	return Fraction(newnum, newden);
 }
 
-Fraction operator *(const Fraction& frac1, const Fraction& frac2) {
+Fraction operator *(const Fraction  &frac1, const Fraction& frac2) {
 	int newnum = frac1.num * frac2.num;
 	int newden = frac1.den * frac2.den; // Note how the algorithm for multiplying fractions was implemented
 	return Fraction(newnum, newden);
@@ -87,6 +87,10 @@ ostream &operator<<(ostream &stream, const Fraction &frac) {
 	return stream;
 }
 
+bool operator !=(const Fraction& frac1, const Fraction& frac2) {
+	return (frac1.num != frac2.num || frac1.den != frac2.den);// We neeb to use || for this one , if y
+	}
+
 int main() {
 	char enterme;
 	Fraction f0(100, 800);
@@ -95,7 +99,7 @@ int main() {
 	Fraction f1; 
 	cout << "f1 = " << f1 << endl;
 	Fraction f2(1, 4);
-	Fraction f5(2, 4);
+	Fraction f5(1, 4);
 	cout << "f5 =" << f5 << endl;
 	cout << "f2 = "<< f2 << endl;
 	Fraction f3 = f1 + f2;
@@ -114,6 +118,11 @@ int main() {
 	Fraction f10(5, 10);
 	Fraction f11(3, 4);
 	cout << " f10 * f11 is " << f10 * f11 << endl;
+
+	cout << (f10 == f9) << endl; // Trying the boolean one
+	cout << (f10 != f9) <<endl; // This should return True
+	cout << (f2 != f5) << endl;
+	cout << (f2 == f5) << endl;
 
 	cin >> enterme; //holds console open in some situations
 	return 0;
