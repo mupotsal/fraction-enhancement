@@ -12,7 +12,7 @@ By 8 am on 9/13/19 Final Milestone: Lab is complete.
 #include <iostream>
 using namespace std;
 
-/* The function below finds the greatest common devisor*/
+/* The function below finds the greatest common devisor, which is reducing fraction in the construtor*/
 int gcd(int m, int n) {
 	while (m%n != 0) {
 		int oldm = m;
