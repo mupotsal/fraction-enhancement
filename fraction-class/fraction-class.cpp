@@ -107,15 +107,16 @@ int main() {
 	Fraction f4 = f2 + f2;
 	cout << "f4 is f2 + f2 = " << f4 << endl;
 
-	Fraction f6(2, 4);
+
+	Fraction f6(2, 4); // testing the subtraction 
 	Fraction f7(1, 4);
-	cout << "f6-f7 is " << f6 - f7 << endl;
+	cout << "f6-f7 is " << f6 - f7 << endl;  // This should  return 1/4 and it did.
 
 	Fraction f8(2, 4);
 	Fraction f9(1, 4);
-	cout << "f8 / f9 is " << f8 / f9 << endl;
+	cout << "f8 / f9 is " << f8 / f9 << endl; // This should return 2/1 and it did therefore   the implimentation was correct.
 
-	Fraction f10(5, 10);
+	Fraction f10(5, 10);// Trying to test the mulitplication implementation.
 	Fraction f11(3, 4);
 	cout << " f10 * f11 is " << f10 * f11 << endl;
 
@@ -124,6 +125,22 @@ int main() {
 	cout << (f2 != f5) << endl;
 	cout << (f2 == f5) << endl;
 
+
+	Fraction f13(2, 3);
+	Fraction f14(4, 6);
+	cout << (f13 != f14) << endl; 
+	// This should give 0 because its false.
+
+
+	// Trying to add multiple stuff
+	Fraction f01(1,2);
+	Fraction f15(1,2);
+	Fraction f16(1,2);
+	cout << "f01 + f15 + f15 is " << (f01 + f15 + f16) << endl;
+
+	// trying a complex addition.
+	cout << "f8+f9*f13)" << (f8 + f9 * f13) << endl;
+	//This is giving a true answer. But why.
 	cin >> enterme; //holds console open in some situations
 	return 0;
 }
